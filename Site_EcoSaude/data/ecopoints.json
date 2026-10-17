@@ -1,0 +1,123 @@
+
+[
+  {
+    "id": "suzano-maria-helena",
+    "nome": "Ecoponto Parque Maria Helena",
+    "municipio": "Suzano",
+    "endereco": "Rua Antônio Francisco dos Santos, 186 – Parque Maria Helena",
+    "latitude": -23.5281318,
+    "longitude": -46.3086423,
+    "materiais": ["Construção civil", "Móveis", "Eletroeletrônicos", "Poda e jardinagem", "Recicláveis", "Óleo de cozinha", "Pilhas e baterias"],
+    "horario": "Segunda a sexta, das 8h às 19h",
+    "fonte": "https://suzano.sp.gov.br/meio-ambiente/residuos/ecopontos/",
+    "verificadoEm": "2026-10-09"
+  },
+  {
+    "id": "suzano-marginal-una",
+    "nome": "Ecoponto Marginal do Una",
+    "municipio": "Suzano",
+    "endereco": "Rua Afonso Nícola Redondo, s/n – Vila Figueira",
+    "latitude": -23.6025,
+    "longitude": -46.3075,
+    "materiais": ["Construção civil", "Eletroeletrônicos", "Recicláveis", "Óleo de cozinha", "Pilhas e baterias"],
+    "horario": "Segunda a sexta, das 8h às 19h",
+    "fonte": "https://suzano.sp.gov.br/meio-ambiente/residuos/ecopontos/",
+    "verificadoEm": "2026-10-09"
+  },
+  {
+    "id": "suzano-dona-benta",
+    "nome": "Ecoponto Dona Benta",
+    "municipio": "Suzano",
+    "endereco": "Estrada Takashi Kobata, 183 – Rio Baixo",
+    "latitude": -23.4988,
+    "longitude": -46.3015,
+    "materiais": ["Construção civil", "Móveis", "Eletroeletrônicos", "Poda e jardinagem", "Pneus"],
+    "horario": "Segunda a sexta, das 8h às 19h",
+    "fonte": "https://suzano.sp.gov.br/meio-ambiente/residuos/ecopontos/",
+    "verificadoEm": "2026-10-09"
+  },
+  {
+    "id": "suzano-boa-vista",
+    "nome": "Ecoponto Boa Vista",
+    "municipio": "Suzano",
+    "endereco": "Rua Vitor Miguelino, 553 – Boa Vista",
+    "latitude": -23.5350,
+    "longitude": -46.2977,
+    "materiais": ["Construção civil", "Móveis", "Eletroeletrônicos", "Poda e jardinagem", "Pneus"],
+    "horario": "Segunda a sexta, das 8h às 19h",
+    "fonte": "https://suzano.sp.gov.br/meio-ambiente/residuos/ecopontos/",
+    "verificadoEm": "2026-10-09"
+  },
+  {
+    "id": "suzano-miguel-badra",
+    "nome": "Ecoponto Jaguari / Miguel Badra",
+    "municipio": "Suzano",
+    "endereco": "Rua do Progresso, 300 – Cidade Miguel Badra",
+    "latitude": -23.4912,
+    "longitude": -46.3315,
+    "materiais": ["Construção civil", "Móveis", "Eletroeletrônicos", "Poda e jardinagem", "Recicláveis", "Óleo de cozinha", "Pilhas e baterias"],
+    "horario": "Segunda a sexta, das 8h às 17h; sábado, das 8h às 12h",
+    "fonte": "https://suzano.sp.gov.br/ecopontos-de-suzano-estao-em-pleno-funcionamento/",
+    "verificadoEm": "2026-10-09"
+  },
+  {
+    "id": "itaqua-sao-manoel",
+    "nome": "Ecoponto São Manoel",
+    "municipio": "Itaquaquecetuba",
+    "endereco": "Rua Carmem Miranda, 148 – São Manoel",
+    "latitude": -23.456903,
+    "longitude": -46.348794,
+    "materiais": ["Construção civil", "Móveis desmontados", "Madeira", "Recicláveis", "Eletrodomésticos", "Eletroeletrônicos"],
+    "horario": "Segunda a sábado, das 8h às 17h",
+    "fonte": "https://www.itaquaquecetuba.sp.gov.br/portal/noticias/ver.php?id=5721",
+    "verificadoEm": "2026-10-09"
+  },
+  {
+    "id": "itaqua-marengo",
+    "nome": "Ecoponto Marengo",
+    "municipio": "Itaquaquecetuba",
+    "endereco": "Avenida Gonçalves Dias, 440 – Marengo",
+    "latitude": -23.4475,
+    "longitude": -46.3312,
+    "materiais": ["Construção civil", "Móveis desmontados", "Madeira", "Recicláveis", "Eletrodomésticos", "Eletroeletrônicos"],
+    "horario": "Segunda a sábado, das 8h às 17h",
+    "fonte": "https://www.itaquaquecetuba.sp.gov.br/portal/noticias/ver.php?id=5721",
+    "verificadoEm": "2026-10-09"
+  },
+  {
+    "id": "itaqua-vila-augusta",
+    "nome": "Ecoponto Vila Augusta",
+    "municipio": "Itaquaquecetuba",
+    "endereco": "Estrada Felix dos Santos, 996 – Vila Augusta",
+    "latitude": -23.4813,
+    "longitude": -46.2845,
+    "materiais": ["Construção civil", "Móveis desmontados", "Madeira", "Recicláveis", "Eletrodomésticos", "Eletroeletrônicos"],
+    "horario": "Segunda a sábado, das 8h às 17h",
+    "fonte": "https://www.itaquaquecetuba.sp.gov.br/portal/noticias/ver.php?id=5721",
+    "verificadoEm": "2026-10-09"
+  },
+  {
+    "id": "mogis-cezar-souza",
+    "nome": "Ecoponto Cezar de Souza",
+    "municipio": "Mogi das Cruzes",
+    "endereco": "Avenida Capitão Arcílio Rizzi, 30 – Cezar de Souza",
+    "latitude": -23.5042,
+    "longitude": -46.1089,
+    "materiais": ["Recicláveis", "Óleo de cozinha", "Gesso", "Isopor", "Eletroeletrônicos", "Eletrodomésticos", "Madeira", "Móveis", "Pneus", "Poda e jardinagem", "Construção civil"],
+    "horario": "Segunda a sábado, das 8h às 18h",
+    "fonte": "https://site.mogidascruzes.sp.gov.br/unidade-e-equipamento/todos-os-assuntos/ecoponto-cezar-de-souza",
+    "verificadoEm": "2026-10-09"
+  },
+  {
+    "id": "ferraz-ecoponto-municipal",
+    "nome": "Ecoponto Municipal Ricardo de Oliveira Silva",
+    "municipio": "Ferraz de Vasconcelos",
+    "endereco": "Avenida Tancredo de Almeida Neves, 2801 – Jardim Nossa Senhora do Carmo",
+    "latitude": -23.5356,
+    "longitude": -46.3688,
+    "materiais": ["Construção civil em pequenas quantidades", "Recicláveis", "Pilhas", "Eletrônicos", "Medicamentos vencidos", "Óleo de cozinha", "Isopor"],
+    "horario": "Segunda a sexta, das 8h às 17h",
+    "fonte": "https://ferrazdevasconcelos.sp.gov.br/web/meio-ambiente-e-protecao-animal/prefeitura-orienta-populacao-sobre-uso-correto-do-ecoponto-em-ferraz-de-vasconcelos/",
+    "verificadoEm": "2026-10-09"
+  }
+]

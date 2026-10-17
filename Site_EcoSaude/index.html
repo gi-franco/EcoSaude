@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#174D3A">
+  <meta name="description" content="EcoSaúde: informação ambiental, saúde comunitária e localização de ecopontos no Alto Tietê.">
+  <title>EcoSaúde — Informação que Transforma</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script defer src="js/ecopoints.js"></script>
+  <script defer src="js/map.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="EcoSaúde, página inicial">
+      <svg class="brand-icon" viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M24 44V18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M24 28C8 29 5 17 7 7c12 0 21 5 21 17" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M24 36c0-13 7-21 18-22 1 12-4 22-18 22Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-copy">
+        <strong>EcoSaúde</strong>
+        <span>Informação que Transforma</span>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menu-toggle"
+      aria-expanded="false" aria-controls="main-nav">
+      <span class="sr-only">Abrir menu</span>
+      <span aria-hidden="true">☰</span>
+    </button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+      <a href="#quem-somos">Quem somos</a>
+      <a href="#meio-ambiente">Meio ambiente</a>
+      <a href="#saude">Saúde</a>
+      <a href="#bem-estar">Bem-estar</a>
+      <a class="nav-cta" href="#ecopontos">Pesquisar ecopontos</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <span class="eyebrow">Cuidado com o lugar onde vivemos</span>
+        <h1>Descarte correto começa perto de você.</h1>
+        <p>Descubra como pequenas atitudes podem proteger sua saúde, sua comunidade e o meio ambiente.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#ecopontos">Encontrar ecopontos</a>
+          <a class="button button-secondary" href="#bem-estar">Aprender a descartar</a>
+        </div>
+        <p class="hero-note">Informação acessível para comunidades mais saudáveis.</p>
+      </div>
+      <div class="hero-visual" role="img"
+        aria-label="Ilustração de uma folha verde representando o cuidado ambiental">
+        <svg viewBox="0 0 360 320" aria-hidden="true">
+          <circle cx="180" cy="160" r="124" fill="#DCEBDD"/>
+          <circle cx="180" cy="160" r="91" fill="#B7D5B9"/>
+          <path d="M180 242V118" stroke="#174D3A" stroke-width="7" stroke-linecap="round"/>
+          <path d="M180 182C119 179 105 132 111 91c48 0 81 28 78 75"
+            fill="#65A878" stroke="#174D3A" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M180 217c2-62 38-101 91-104 5 52-24 98-91 104Z"
+            fill="#85B98B" stroke="#174D3A" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M120 108l53 62m83-45-70 80"
+            fill="none" stroke="#174D3A" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="270" cy="68" r="12" fill="#D9A441"/>
+          <circle cx="83" cy="225" r="8" fill="#D9A441"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="quick-links section-wrap" aria-label="Acesso rápido">
+      <a class="quick-card" href="#meio-ambiente">
+        <span class="card-icon" aria-hidden="true">♧</span>
+        <h2>Meio ambiente</h2>
+        <p>Entenda como o descarte afeta a natureza.</p>
+        <span class="text-link">Conhecer os impactos →</span>
+      </a>
+      <a class="quick-card" href="#saude">
+        <span class="card-icon" aria-hidden="true">♡</span>
+        <h2>Saúde</h2>
+        <p>Conheça os cuidados com a saúde coletiva.</p>
+        <span class="text-link">Saiba mais →</span>
+      </a>
+      <a class="quick-card" href="#bem-estar">
+        <span class="card-icon" aria-hidden="true">✓</span>
+        <h2>Descarte correto</h2>
+        <p>Aprenda atitudes simples para o cotidiano.</p>
+        <span class="text-link">Ver orientações →</span>
+      </a>
+      <a class="quick-card" href="#ecopontos">
+        <span class="card-icon" aria-hidden="true">⌖</span>
+        <h2>Bem-estar</h2>
+        <p>Descubra como cuidar dos espaços comunitários.</p>
+        <span class="text-link">Encontrar ecopontos →</span>
+      </a>
+    </section>
+
+    <section class="content-section section-wrap" id="quem-somos">
+      <div class="section-heading">
+        <span class="eyebrow">Nossa iniciativa</span>
+        <h2>Informação que transforma comunidades.</h2>
+        <p>O EcoSaúde — Informação que Transforma aproxima a informação das pessoas e incentiva atitudes que beneficiam o meio ambiente e a saúde da comunidade.</p>
+      </div>
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>Informar</h3>
+          <p>Facilitar o acesso a informações sobre o descarte adequado de resíduos.</p>
+        </article>
+        <article class="info-card">
+          <h3>Conscientizar</h3>
+          <p>Explicar os impactos ambientais e os riscos à saúde associados ao descarte irregular.</p>
+        </article>
+        <article class="info-card">
+          <h3>Aproximar</h3>
+          <p>Ajudar os moradores a encontrar pontos de coleta e serviços disponíveis.</p>
+        </article>
+      </div>
+      <p class="team-note">Projeto acadêmico de extensão.</p>
+    </section>
+
+    <section class="content-section section-tinted" id="meio-ambiente">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <span class="eyebrow">Cuidado ambiental</span>
+          <h2>O descarte incorreto deixa marcas.</h2>
+          <p>O destino dos resíduos faz diferença para a preservação dos recursos naturais e a qualidade dos espaços públicos.</p>
+        </div>
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>Solo e água</h3>
+            <p>Resíduos descartados inadequadamente podem liberar contaminantes no ambiente e prejudicar os ecossistemas.</p>
+            <p class="practical-tip">O que fazer: encaminhe cada material para a coleta adequada.</p>
+          </article>
+          <article class="info-card">
+            <h3>Bueiros e enchentes</h3>
+            <p>O lixo acumulado nas ruas pode obstruir a drenagem e agravar alagamentos.</p>
+            <p class="practical-tip">O que fazer: nunca abandone resíduos em vias públicas ou bueiros.</p>
+          </article>
+          <article class="info-card">
+            <h3>Fauna e vegetação</h3>
+            <p>Animais podem ingerir resíduos ou ficar presos neles, e ambientes naturais podem ser degradados.</p>
+            <p class="practical-tip">O que fazer: mantenha os resíduos acondicionados até a coleta.</p>
+          </article>
+          <article class="info-card">
+            <h3>Vetores de doenças</h3>
+            <p>Resíduos acumulados e recipientes com água parada podem favorecer a presença de alguns vetores.</p>
+            <p class="practical-tip">O que fazer: descarte recipientes sem uso e evite água parada.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section section-wrap" id="saude">
+      <div class="section-heading">
+        <span class="eyebrow">Saúde comunitária</span>
+        <h2>Um ambiente cuidado também protege as pessoas.</h2>
+        <p>O descarte responsável contribui para espaços mais limpos e reduz algumas situações de exposição a riscos.</p>
+      </div>
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>Contato com vetores</h3>
+          <p>O acúmulo de resíduos pode criar condições favoráveis a animais transmissores de doenças, dependendo do ambiente.</p>
+        </article>
+        <article class="info-card">
+          <h3>Materiais perigosos</h3>
+          <p>Vidros quebrados, agulhas e outros perfurocortantes podem causar ferimentos. Nunca os manipule sem proteção adequada.</p>
+        </article>
+        <article class="info-card">
+          <h3>Queima de resíduos</h3>
+          <p>A fumaça pode conter substâncias prejudiciais à saúde. Não queime lixo doméstico.</p>
+        </article>
+        <article class="info-card">
+          <h3>Qualidade de vida</h3>
+          <p>Locais com resíduos acumulados podem gerar odores, dificultar o uso dos espaços e prejudicar o bem-estar coletivo.</p>
+        </article>
+      </div>
+      <p class="source-note">Informação pública: <a href="https://www.gov.br/saude/pt-br" target="_blank" rel="noopener noreferrer">Ministério da Saúde</a> e <a href="https://www.gov.br/mma/pt-br" target="_blank" rel="noopener noreferrer">Ministério do Meio Ambiente</a>. Este conteúdo é educativo e não substitui orientação profissional de saúde.</p>
+    </section>
+
+    <section class="content-section section-tinted" id="bem-estar">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <span class="eyebrow">Pequenas atitudes</span>
+          <h2>Como melhorar o bem-estar no dia a dia.</h2>
+          <p>Comece com atitudes possíveis na sua casa, na sua rua e nos espaços compartilhados.</p>
+        </div>
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>Separe os resíduos</h3>
+            <p>Organize recicláveis limpos e secos, resíduos orgânicos e rejeitos conforme as orientações da coleta local.</p>
+          </article>
+          <article class="info-card">
+            <h3>Cuide das áreas comuns</h3>
+            <p>Mantenha calçadas e quintais limpos e descarte o lixo nos locais e horários indicados.</p>
+          </article>
+          <article class="info-card">
+            <h3>Evite água parada</h3>
+            <p>Verifique recipientes expostos à chuva e mantenha o lixo protegido até a coleta.</p>
+          </article>
+          <article class="info-card">
+            <h3>Procure coleta especializada</h3>
+            <p>Pilhas, eletrônicos, lâmpadas, medicamentos e outros materiais podem exigir pontos de recebimento específicos.</p>
+          </article>
+        </div>
+        <h3 class="subheading">Guia rápido de separação</h3>
+        
+<div class="waste-grid">
+  <div class="waste-item papel">
+    <strong>Papel</strong>
+    <span>Caixas e folhas limpas e secas.</span>
+  </div>
+
+  <div class="waste-item plastico">
+    <strong>Plástico</strong>
+    <span>Embalagens aceitas pela coleta local.</span>
+  </div>
+
+  <div class="waste-item vidro">
+    <strong>Vidro</strong>
+    <span>Frascos e garrafas; cuidado com peças quebradas.</span>
+  </div>
+
+  <div class="waste-item metal">
+    <strong>Metal</strong>
+    <span>Latas e embalagens metálicas.</span>
+  </div>
+
+  <div class="waste-item organicos">
+    <strong>Orgânicos</strong>
+    <span>Restos de alimentos; compostagem quando disponível.</span>
+  </div>
+
+  <div class="waste-item rejeitos">
+    <strong>Rejeitos</strong>
+    <span>Materiais sem alternativa local de recuperação.</span>
+  </div>
+
+  <div class="waste-item especiais">
+    <strong>Especiais</strong>
+    <span>Pilhas, eletrônicos e outros itens com coleta específica.</span>
+  </div>
+</div>
+    </section>
+
+    <section class="content-section section-wrap" id="ecopontos">
+      <div class="section-heading">
+        <span class="eyebrow">Serviço comunitário</span>
+        <h2>Encontre um ecoponto perto de você.</h2>
+        <p>Informe o CEP da região que deseja consultar para procurar pontos cadastrados no Alto Tietê.</p>
+      </div>
+
+      <form id="cep-form" class="search-panel" novalidate>
+        <label for="cep">CEP da região</label>
+        <div class="search-controls">
+          <input id="cep" name="cep" type="text" inputmode="numeric"
+            autocomplete="postal-code" maxlength="9" placeholder="00000-000"
+            aria-describedby="cep-help cep-error" required>
+          <button class="button button-primary" type="submit" id="search-button">Pesquisar ecopontos</button>
+        </div>
+        <p id="cep-help" class="field-help">Informe apenas o CEP. Não é necessário fornecer o número da residência.</p>
+        <p id="cep-error" class="field-error" role="alert"></p>
+        <p id="search-status" class="status-message" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="results-layout">
+        <div>
+          <div id="map" class="map-panel" role="region" aria-label="Mapa dos ecopontos encontrados">
+            <p class="map-placeholder">O mapa será exibido aqui após a inicialização.</p>
+          </div>
+          <p class="map-credit">Mapa © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> · Mapa interativo por Leaflet.</p>
+        </div>
+        <div class="results-panel">
+          <h3>Resultados da pesquisa</h3>
+          <div class="filter-row">
+            <label for="municipio-filter">Município</label>
+            <select id="municipio-filter">
+              <option value="">Todos os municípios</option>
+              <option value="Suzano">Suzano</option>
+              <option value="Itaquaquecetuba">Itaquaquecetuba</option>
+              <option value="Mogi das Cruzes">Mogi das Cruzes</option>
+              <option value="Ferraz de Vasconcelos">Ferraz de Vasconcelos</option>
+            </select>
+          </div>
+          <div id="ecopoint-results" aria-live="polite">
+            <p class="empty-state">Pesquise um CEP para consultar os registros disponíveis.</p>
+          </div>
+        </div>
+      </div>
+      <p class="source-note">A posição obtida pelo CEP é aproximada. Distâncias calculadas em linha reta não representam a distância real por ruas ou trilhas. Confirme endereço, horário e materiais aceitos na fonte oficial antes de se deslocar.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="brand footer-brand" href="#inicio">
+        <span class="brand-copy"><strong>EcoSaúde</strong><span>Informação que Transforma</span></span>
+      </a>
+      <p>Informação acessível para escolhas mais conscientes e comunidades mais saudáveis.</p>
+      <nav class="footer-nav" aria-label="Links do rodapé">
+        <a href="#quem-somos">Quem somos</a>
+        <a href="#meio-ambiente">Meio ambiente</a>
+        <a href="#saude">Saúde</a>
+        <a href="#bem-estar">Bem-estar</a>
+        <a href="#ecopontos">Pesquisar ecopontos</a>
+      </nav>
+      <p class="footer-disclaimer">Os dados de funcionamento e recebimento devem ser confirmados com as fontes oficiais dos municípios. A disponibilidade do mapa depende de serviços externos.</p>
+      <p class="copyright">EcoSaúde — Projeto acadêmico de extensão.</p>
+    </div>
+  </footer>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    if (window.VLibras && window.VLibras.Widget) {
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    }
+  </script>
+</body>
+</html>
